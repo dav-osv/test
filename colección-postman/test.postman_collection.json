@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "23c9d289-032e-4652-a89a-2304c29ffbf2",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20044912"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"usuario\": \"operador\",\r\n    \"password\": \"operador1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/v1.0/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listEmployees",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ1c2VyIjoiYWRtaW5pc3RyYWRvciJ9.Y3_RXw.U8NIp_qDAc6SX4CvYzWHO3r-aKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1.0/employe",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"employe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showEmploye",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ1c2VyIjoiYWRtaW5pc3RyYWRvciJ9.Y3_WWA.8dinPD0DlDqRi3zpWfkt3Mw88uA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1.0/employe/19",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"employe",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createEmploye",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ1c2VyIjoib3BlcmFkb3IifQ.Y3_Y8Q.CRIsvd5RQaLhxJM8YBL8aojhO_M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Juan Gonzales\",\r\n    \"curp\": \"RAGJ971113HGRMNN01\",\r\n    \"rfc\": \"RAGJ971113HG0\",\r\n    \"codigo_postal\": 706549,\r\n    \"fecha_nacimiento\": \"1997-11-13\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1.0/employe",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"employe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEmploye",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ1c2VyIjoiYWRtaW5pc3RyYWRvciJ9.Y3_RXw.U8NIp_qDAc6SX4CvYzWHO3r-aKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Samuel Reyes\",\r\n    \"curp\": \"REOS931109HOCYRM08\",\r\n    \"rfc\": \"REOS931109HOC\",\r\n    \"codigo_postal\": \"68015\",\r\n    \"fecha_nacimiento\": \"1993-11-09\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1.0/employe/19",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"employe",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEmploye",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ1c2VyIjoic3VwZXJ2aXNvciJ9.Y3_XjQ.E--UYO9rE8TbAnNtRqQ81zgXYe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1.0/employe/13012",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"employe",
+						"13012"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
