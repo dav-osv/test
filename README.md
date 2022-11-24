@@ -1,5 +1,8 @@
 
-1. Librerias ocupadas: 
+Version de python: Python 3.10.2
+
+
+1. Librerias ocupadas:  
 
    pip install Flask-HTTPAuth
    pip install flask 
